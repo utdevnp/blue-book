@@ -17,8 +17,9 @@
 
 ## Make basic files in the your theme root directory
    <ol>
-       <li> <b>header.php </b> - put the header part of the your site. Also put the <b> wp_head()</b> with php tag </li>
-        <li> <b>footer.php</b>  - put the footer part of the your site. Also put the <b> wp_footer()</b> with php tag  </li>
+        <li> <b> index.php </b> (main template file) </li>
+        <li> <b>header.php </b> - put the header part of the index.php. Also put the <b> wp_head()</b> with php tag </li>
+        <li> <b>footer.php</b>  - put the footer part of the index.php. Also put the <b> wp_footer()</b> with php tag  </li>
         <li> <b>functions.php</b> - you need to make and registers , initilized the stylesheet and scripts etc or make weigets</li>
   </ol>
   
@@ -70,4 +71,58 @@ bloginfo("template_directory")/assets/images/banner1.jpg
   <img src=" bloginfo("template_directory") /assets/images/banner1.jpg" alt=""/> 
  ```
 
+## Including header and footer .php in to the template page like index.php
+<ol>
+    <li> use <b> get_header() </b> and <b> get_footer() </b>  in the template top and bottom.</li>
+</ol>
 
+## Registering the nav/menu in the function.php
+<ol>
+    <li> use following code to register menu </br>
+        <pre>
+add_theme_support( 'menus' );
+register_nav_menus(
+    array(
+        'top_menu' => 'Header menu',
+        'footer_menu' => 'Footer menu',
+    ) 
+);
+        </pre>
+         <b> Your register menus shows in to wp-admin > theme > menu area.  </b>
+    </li>
+</ol>
+
+## Showing the register menu in  theme 
+<ol>
+    <li>Place the following code in the menu are in your theme may be header.php <br>
+    <pre>
+wp_nav_menu(
+    array(
+        'theme_location'=>"top_menu", // must be same in function.php register_nav_menus
+        'menu'=>"menu-desktop-menu", // id of the element
+        'container'=>'ul', // menu ul 
+        "menu_class"=>"menu" // menu ul class
+    )
+);
+    </pre>
+    </li>
+</ol>
+
+## Register and making the weigets function.php 
+<ol>
+    <li> use following code to register widgets </br>
+        <pre>
+function sociallinks_widgets_init() {
+ register_sidebar(
+  array(
+   'name'          => __( 'Social Links', 'theme_name' ),
+   'id'            => 'sidebar-1',
+   'description'   => __( 'Add widgets here to appear in your footer.', 'theme_name' ),
+   // you may find more options 
+  )
+ );
+}
+        </pre>
+        <b> Your register widgets shows in to wp-admin > theme > widgets area.  </b>
+    </li>
+</ol>
