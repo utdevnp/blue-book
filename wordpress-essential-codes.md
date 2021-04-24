@@ -2,8 +2,8 @@
 ### You must have a basic knowlwdge of wordpress installation configure and how it works.
 ## add custome theme in the wordpress cms 
 <ol>
-<li> copy your custom theme folder and place into <b> wp_content/themes </b> </li>
-    <li> make <b>style.css</b>  file in the theme root directory and place following code <br>
+<li> Copy your custom theme folder and place into <b> wp_content/themes </b>. </li>
+    <li> Make <b>style.css</b>  file in the theme root directory and place following code <br>
 <pre>
     /*
     Theme Name: Theme Name
@@ -14,21 +14,21 @@
     */
 </pre>
 </li>
-    <li>and go to admin panel and activate the theme</li>
+    <li>And go to admin panel and activate the theme.</li>
 </ol>
 
 ## Make basic files in the your theme root directory
    <ol>
         <li> <b> index.php </b> (main template file) </li>
-        <li> <b>header.php </b> - put the header part of the index.php. Also put the <b> wp_head()</b> with php tag </li>
-        <li> <b>footer.php</b>  - put the footer part of the index.php. Also put the <b> wp_footer()</b> with php tag  </li>
-        <li> <b>functions.php</b> - you need to make and registers , initilized the stylesheet and scripts etc or make weigets</li>
+        <li> <b>header.php </b> - Put the header part of the index.php. Also put the <b> wp_head()</b> with php tag. </li>
+        <li> <b>footer.php</b>  - Put the footer part of the index.php. Also put the <b> wp_footer()</b> with php tag.  </li>
+        <li> <b>functions.php</b> - You need to make and register, initilize the stylesheet and scripts, etc or make widgets.</li>
   </ol>
   
 ## Linking the stylesheets with functions.php
 <ol>
-   <li> If you have a cdn links place theme as usual</li>
-  <li>Make function (<b>load_stylesheet()</b>) and load stylesheet <br>
+   <li> If you have a cdn links place theme as usual.</li>
+  <li>Make function (<b>load_stylesheet()</b>) and load stylesheet. <br>
 <pre>
 function load_stylesheet(){
 
@@ -45,8 +45,8 @@ add_action("wp_enqueue_scripts","load_stylesheet");
 ## Linking the scripts with functions.php
 
 <ol>
-  <li> If you have a cdn links place theme as usual</li>
-  <li>Make function (<b>load_scripts()</b>) and load scripts <br>
+  <li> If you have a cdn links place theme as usual.</li>
+  <li>Make function (<b>load_scripts()</b>) and load scripts. <br>
 <pre>
 function load_scripts(){
   wp_register_script("jquery",get_template_directory_uri()."/assets/js/jquery-3.2.1.min.js",array(),"1","all");
@@ -80,7 +80,7 @@ bloginfo("template_directory")/assets/images/banner1.jpg
 
 ## Registering the nav/menu in the function.php
 <ol>
-    <li> use following code to register menu </br>
+    <li> Use following code to register menu. </br>
         <pre>
 add_theme_support( 'menus' );
 register_nav_menus(
@@ -90,13 +90,13 @@ register_nav_menus(
     ) 
 );
         </pre>
-         <b> Your register menus shows in to wp-admin > theme > menu area.  </b>
+         <b> Your register menu shows in to wp-admin > theme > menu area.  </b>
     </li>
 </ol>
 
 ## Showing the register menu in  theme 
 <ol>
-    <li>Place the following code in the menu are in your theme may be header.php <br>
+    <li>Place the following code in the menu section of your theme, may be header.php <br>
     <pre>
 wp_nav_menu(
     array(
@@ -112,7 +112,7 @@ wp_nav_menu(
 
 ## Register and making the weigets function.php 
 <ol>
-    <li> use following code to register widgets </br>
+    <li> Use following code to register widgets. </br>
         <pre>
 function sociallinks_widgets_init() {
  register_sidebar(
