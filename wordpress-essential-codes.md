@@ -58,11 +58,16 @@ function load_scripts(){
 ## Linking assets in the file like images , favicon, background image etc 
 <ul>
     <li> Link your asset to show image of the theme , use <br>
-        <pre>
-            bloginfo("template_directory")/assets/images/banner1.jpg
-        </pre>
-        <b>Example</b>:  ```html <img src=" bloginfo("template_directory") /assets/images/banner1.jpg" alt=""/> ```
+<pre>
+bloginfo("template_directory")/assets/images/banner1.jpg
+</pre>
+        <b>Example</b>:  
+       
     </li>
 </ul>
+
+ ```html
+  <img src=" bloginfo("template_directory") /assets/images/banner1.jpg" alt=""/> 
+ ```
 
 
