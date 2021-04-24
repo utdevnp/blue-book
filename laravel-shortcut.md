@@ -1,3 +1,11 @@
+## Route with optional parameter
+<ol>
+  <li> <pre> 
+  Route::get("user/{user_type?}");
+  Route:post("user/{user_type?}");
+  </pre> </li>
+</ol>
+
 ## Artisan commands with controller / routes
 <ol>
   <li> Example :  Run migration <br>
