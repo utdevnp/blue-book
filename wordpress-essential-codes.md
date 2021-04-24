@@ -1,3 +1,5 @@
+# Welcome :blue_book:
+### You must have a basic knowlwdge of wordpress installation configure and how it works.
 ## add custome theme in the wordpress cms 
 <ol>
 <li> copy your custom theme folder and place into <b> wp_content/themes </b> </li>
@@ -126,3 +128,5 @@ function sociallinks_widgets_init() {
         <b> Your register widgets shows in to wp-admin > theme > widgets area.  </b>
     </li>
 </ol>
+
+### Happy Coding :smile:
