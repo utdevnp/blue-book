@@ -1,3 +1,4 @@
+ <pre>
  $orderList = $this->__pageModel->getOrderByCustomerId($formData['customer_id']);
                 $newArray = [];
                 foreach ($orderList as $order => $value) {
@@ -12,3 +13,4 @@
                     'message' => 'Order list listed successfully',
                     'data' => $newArray
                 ));
+      </pre>
