@@ -1,4 +1,5 @@
 ## Append new array in existing array field
+
 <pre>
  $orderList = $this->__pageModel->getOrderByCustomerId($formData['customer_id']);
      $newArray = [];
@@ -15,3 +16,11 @@
          'data' => $newArray
      ));
 </pre>
+
+
+### New array added 
+<pre>
+$newArray[$order]['line_items'] = $this->__orderLineItemModel->getByOrderId($value['id']);
+</pre>
+
+
